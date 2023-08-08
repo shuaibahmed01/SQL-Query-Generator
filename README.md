@@ -32,11 +32,11 @@ The Intuitive SQL Query Generator is a full-stack application that leverages the
 
 ```shell
 # Install frontend dependencies
-cd frontend
+cd client
 npm install
 
 # Install backend dependencies
-cd ../backend
+cd ../server
 npm install
 ```
 
@@ -47,10 +47,10 @@ OPENAI_API_KEY= your-api-key
 ```
 4. **Start Development Environment:**
 ```shell
-cd frontend
+cd client
 npm run dev
 
-cd ../backend
+cd ../server
 node index.js
 ```
 
