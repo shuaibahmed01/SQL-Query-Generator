@@ -1,5 +1,7 @@
 # Intuitive SQL Query Generator with Natural Language Processing
 
+## Overview
+
 ![Alt text](/sqlogonew.png)
 
 The Intuitive SQL Query Generator is a full-stack application that leverages the power of Natural Language Processing (NLP) to allow users to create complex SQL queries using simple, human-friendly language. The application is built using React for the front end, Node.js and Express for the backend, and integrates the ChatGPT API to process natural language input.
@@ -55,6 +57,10 @@ npm run dev
 cd ../server
 node index.js
 ```
+
+
+
+
 
 
 
