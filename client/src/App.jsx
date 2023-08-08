@@ -8,11 +8,28 @@ import { useState } from 'react'
 function App() {
 
   const [queryDescription, setQueryDescription] = useState('')
+  const [sqlQuery, setSqlQuery] = useState("");
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log("form submitted successfully: ",queryDescription)
-  }
+    
+    const generatedQuery = await generateQuery();
+    setSqlQuery(generatedQuery)
+    
+  };
+
+  const generateQuery = async () => {
+    const response = await fetch("http://localhost:3005/generate", {
+      method:"POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ queryDescription: queryDescription}),
+    });
+
+    const data = await response.json()
+    return data.response.trim();
+  } 
 
 
   return (
@@ -21,7 +38,7 @@ function App() {
       <h3>Generate SQL with AI</h3>
 
 
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className={styles["form-container"]}>
         <input 
           type='text'
           name='query-description'
@@ -32,6 +49,10 @@ function App() {
           type='submit'
           value='Generate Query' 
         />
+
+        <div className={styles["result-container"]}>
+          <pre>{sqlQuery}</pre>
+        </div>
       </form>
 
 

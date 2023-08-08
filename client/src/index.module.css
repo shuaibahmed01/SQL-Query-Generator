@@ -27,10 +27,11 @@
     padding-top: 60px;
   }
   .main .icon {
-    width: 34px;
+    width: 100px;
+    margin-top: 8rem;
   }
   .main h3 {
-    font-size: 32px;
+    font-size: 40px;
     line-height: 40px;
     font-weight: bold;
     color: #202123;
@@ -47,13 +48,17 @@
     border-radius: 4px;
     margin-bottom: 24px;
     outline-color: #10a37f;
+    width: 50rem;
+    
   }
+  
   .main ::placeholder {
     color: #8e8ea0;
     opacity: 1;
+
   }
   .main input[type="submit"] {
-    padding: 12px 0;
+    padding: 12px 70px;
     color: #fff;
     background-color: #10a37f;
     border: none;
@@ -65,3 +70,24 @@
     margin-top: 40px;
     width: 69ch;
   }
+
+  
+  /* Add a new class for the form container */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Add a new class for the result container */
+  .result-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center; /* Center the output horizontally */
+    align-items: center; /* Center the output vertically */
+  }
+  
+  .result-container pre {
+    font-size: 24px; /* Increase font size */
+  }
+
