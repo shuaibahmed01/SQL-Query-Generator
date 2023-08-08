@@ -47,7 +47,11 @@ OPENAI_API_KEY= your-api-key
 ```
 4. **Start Development Environment:**
 ```shell
-npm start
+cd frontend
+npm run dev
+
+cd ../backend
+node index.js
 ```
 
 
