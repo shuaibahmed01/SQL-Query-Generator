@@ -20,8 +20,6 @@ The Intuitive SQL Query Generator is a full-stack application that leverages the
 - **Front End:** React, HTML, CSS
 - **Back End:** Node.js, Express
 - **NLP Integration:** OpenAI's ChatGPT API
-- **Database:** (Specify if applicable, e.g., MySQL, PostgreSQL)
-- **Deployment:** (Specify if applicable, e.g., Heroku, AWS, etc.)
 
 ## Installation and Usage
 
